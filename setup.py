@@ -26,7 +26,7 @@ setuptools.setup(
     install_requires=["jupyter-server-proxy>=1.5.0"],
     entry_points={
         "jupyter_serverproxy_servers": [
-            "vscode = jupyter_juicefs_proxy:setup_gateway",
+            "juicefs = jupyter_juicefs_proxy:setup_juicefs",
         ]
     },
     package_data={
