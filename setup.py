@@ -23,7 +23,7 @@ setuptools.setup(
         "Operating System :: OS Independent",
         "Programming Language :: Python",
     ],
-    install_requires=["jupyter-server-proxy>=1.5.0"],
+    install_requires=["jupyter-server-proxy"],
     entry_points={
         "jupyter_serverproxy_servers": [
             "juicefs = jupyter_juicefs_proxy:setup_juicefs",
