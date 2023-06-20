@@ -6,16 +6,12 @@ from typing import Any, Dict
 logger = logging.getLogger(__name__)
 logger.setLevel("INFO")
 
-def setup_gatewaye():
+def setup_gateway():
 
     def _get_juicefs_cmd(port):
         executable = "juicefs"
         if not shutil.which(executable):
             raise FileNotFoundError("Can not find juicefs in PATH")
-        
-        # Start vscode in CODE_WORKINGDIR env variable if set
-        # If not, start in 'current directory', which is $REPO_DIR in mybinder
-        # but /home/jovyan (or equivalent) in JupyterHubs
         os.environ["MINIO_ROOT_USER"] = "admin"
         os.environ["MINIO_ROOT_PASSWORD"] = "12345678"
         cmd = [

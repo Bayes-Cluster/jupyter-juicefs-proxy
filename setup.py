@@ -23,7 +23,7 @@ setuptools.setup(
     install_requires=["jupyter-server-proxy"],
     entry_points={
         "jupyter_serverproxy_servers": [
-            "juicefs = jupyter_juicefs_proxy:setup_juicefs",
+            "juicefs = jupyter_juicefs_proxy:setup_gateway",
         ]
     },
     package_data={
